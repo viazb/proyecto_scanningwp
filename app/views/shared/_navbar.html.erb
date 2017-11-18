@@ -1,0 +1,33 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="<%=root_path%>" style="color: #6B6E65">SCANNINGWP</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <% if user_signed_in? %>
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="<%=new_scan_path%>">Nuevo Análisis <span class="sr-only">(current)</span></a>
+          </li>
+          <li>
+            <a href="<%=scans_path%>">Mis Análisis</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#">Usuario:  <%=current_user.name%></a>
+          </li>
+          <li>
+            <a href="<%= destroy_user_session_path %>" data-method='delete'>Salir</a>
+          </li>
+        <% else %>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="<%= new_user_session_path %>"> Iniciar Sesión </a>
+          </li>
+        </ul>
+      <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
