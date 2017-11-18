@@ -1,32 +1,46 @@
-<%= form_for(scan) do |f| %>
-  <% if scan.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(scan.errors.count, "error") %> prohibited this scan from being saved:</h2>
-
-      <ul>
-      <% scan.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<div class="container">
+  <div class="newscan">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-sm-11">
+            <h1 class="panel-title"> <span class="glyphicon glyphicon-flash"></span> Realizar Análisis</h1>
+          </div>
+          </div>
+        </div>
+      <div class="panel-body">
+        <div class="scaner">
+        <div class="col-sm-3">
+          <h5 style="font-weight: bold">Ingrese Url de sitio a análizar</h5>
+        </div>
+        <%= form_for(scan) do |f| %>
+          <% if scan.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(scan.errors.count, "error") %> prohibited this scan from being saved:</h2>
+              <ul>
+                <% scan.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+          <div class="col-sm-6">
+              <div class="input-group">
+                  <%= f.label :url, :class=>'input-group-addon', :id=>'basic-addon3' %>
+                  <%= f.text_field :url, :class=>'form-control' %>
+              </div>
+          </div>
+        <div class="col-sm-3">
+          <div class="actions">
+            <%= f.submit :Análizar, :class=>'btn btn-primary' %>
+          </div>
+          </div>
+        <% end %>
+      </div>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :status %>
-    <%= f.check_box :status %>
+        </div>
+    <p style="color:red"><input type="checkbox" aria-label=""> - Estoy autorizado para realizar análisis de sitio</p>
   </div>
 
-  <div class="field">
-    <%= f.label :url %>
-    <%= f.text_field :url %>
-  </div>
 
-  <div class="field">
-    <%= f.label :sitemap %>
-    <%= f.text_field :sitemap %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>

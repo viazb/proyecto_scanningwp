@@ -1,3 +1,76 @@
 // Place all the styles related to the scans controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.logo{
+  margin-left: 50px;
+  margin-top: 10px;
+}
+
+.info{
+  margin-top: 10px;
+
+}
+
+.version{
+  width: 900px;
+  margin-left: 100px;
+}
+.label_version{
+margin-left: 40px;
+}
+.numero_version{
+  font-size: 50px;
+  margin-left: 70px;
+}
+
+.plugins{
+  margin-top:18px;
+  width:898px;
+  margin-left:100px;
+  height:285px;
+}
+
+.glyphicon{
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.glyphicon-remove{
+  color: red;
+}
+.glyphicon-ok{
+  color: #0E70D1;
+}
+
+.header-fixed {
+    width: 100%
+}
+
+.header-fixed > thead,
+.header-fixed > tbody,
+.header-fixed > thead > tr,
+.header-fixed > tbody > tr,
+.header-fixed > thead > tr > th,
+.header-fixed > tbody > tr > td {
+    display: block;
+}
+
+.header-fixed > tbody > tr:after,
+.header-fixed > thead > tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.header-fixed > tbody {
+    overflow-y: auto;
+    height: 150px;
+}
+
+.header-fixed > tbody > tr > td,
+.header-fixed > thead > tr > th {
+    width: 25%;
+    float: left;
+}

@@ -1,19 +1,83 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Status:</strong>
-  <%= @scan.status %>
-</p>
+  <div class="container">
+    <div class="panel panel-default version">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+              </span> Análisis de sitio <%= @scan.url%>
+            </h3>
+        </div>
+        <div class="panel-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="logo"><%= image_tag 'wordpress-logo.png' %></div>
+              </div>
+              <div class="col-lg-4">
+                <div class="info">
+                    <label class="label_version">Versión WordPress:</label> <br>
+                    <label class="numero_version">4.5</label> <br>
+                    <label>Su versión se encuentra actualizada</label>
+                </div>
+              </div>
 
-<p>
-  <strong>Url:</strong>
-  <%= @scan.url %>
-</p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="panel panel-default plugins">
+      <div class="panel-heading">
+            <h3 class="panel-title">
+              </span> Plugins</h3>
+      </div>
+      <div class="panel-body fixed-panel">
+        <table class="table table-striped header-fixed">
+  <thead>
+    <tr>
+      <th class="estado">Estado</th>
+      <th>Nombre</th>
+      <th>Version</th>
+      <th>Detalle</th>
+    </tr>
+  </thead>
+  <tbody>
 
-<p>
-  <strong>Sitemap:</strong>
-  <%= @scan.sitemap %>
-</p>
+    <tr>
+      <td class="estado"><span class="glyphicon glyphicon-ok"></span> </td>
+      <td><%= 'Featured-content-gallery' %></td>
+      <td><%= '3.2.0' %></td>
+      <td><button type="button" class="btn btn-primary btn-sm">Ver Detalle</button></td>
+    </tr>
+    <tr>
+      <td class="col-xs-2"><span class="glyphicon glyphicon-remove
+"></span> </td>
+      <td class="col-md-7"><%= 'fluid-respnsive-slideshow' %></td>
+      <td class="col-md-3"><%= '2.2.6' %></td>
+      <td><button type="button" class="btn btn-primary btn-sm">Ver Detalle</button></td>
+    </tr>
+    <tr>
+      <td class="col-xs-2"><span class="glyphicon glyphicon-remove"></span> </td>
+      <td class="col-md-7"><%= 'custom-admin-page' %></td>
+      <td class="col-md-3"><%= '1.0.5' %></td>
+      <td><button type="button" class="btn btn-primary btn-sm">Ver Detalle</button></td>
+    </tr>
+    <tr>
+      <td class="col-xs-2"><span class="glyphicon glyphicon-ok"></span> </td>
+      <td class="col-md-7"><%= 'Featured-content-gallery' %></td>
+      <td class="col-md-3"><%= '3.2.0' %></td>
+      <td><button type="button" class="btn btn-primary btn-sm">Ver Detalle</button></td>
+    </tr>
+    <tr>
+      <td class="col-xs-2"><span class="glyphicon glyphicon-ok"></span> </td>
+      <td class="col-md-7"><%= 'Featured-content-gallery' %></td>
+      <td class="col-md-3"><%= '3.2.0' %></td>
+      <td><button type="button" class="btn btn-primary btn-sm">Ver Detalle</button></td>
+    </tr>
 
-<%= link_to 'Edit', edit_scan_path(@scan) %> |
-<%= link_to 'Back', scans_path %>
+
+
+  </tbody>
+</table>
+      </div>
+
+    </div>
+</div>
