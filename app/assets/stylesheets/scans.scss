@@ -9,7 +9,6 @@
 
 .info{
   margin-top: 10px;
-
 }
 
 .version{
@@ -20,8 +19,11 @@
 margin-left: 40px;
 }
 .numero_version{
-  font-size: 50px;
-  margin-left: 70px;
+  font-size: 30px;
+  margin-left: 50px;
+}
+.col-md-4{
+  width: 300px;
 }
 
 .plugins{
@@ -73,4 +75,8 @@ margin-left: 40px;
 .header-fixed > thead > tr > th {
     width: 25%;
     float: left;
+}
+
+.btn{
+  width: 90px;
 }

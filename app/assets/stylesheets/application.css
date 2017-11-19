@@ -16,7 +16,7 @@
 
  .form-signin
   {
-      max-width: 330px;
+      max-width: 250px;
       padding: 15px;
 
   }
@@ -103,5 +103,5 @@
   #footer {
     height: 50px;
     background-color: white;
-    
+
   }
