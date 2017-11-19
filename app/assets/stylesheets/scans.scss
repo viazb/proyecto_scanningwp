@@ -25,12 +25,11 @@ margin-left: 40px;
 .col-md-4{
   width: 300px;
 }
-
 .plugins{
   margin-top:18px;
   width:898px;
   margin-left:100px;
-  height:285px;
+  overflow-y: scroll;
 }
 
 .glyphicon{

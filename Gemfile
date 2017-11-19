@@ -34,6 +34,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+#gem para API.
+gem 'httparty'
+
 
 group :production do
   gem 'pg'
